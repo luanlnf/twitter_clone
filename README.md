@@ -46,18 +46,28 @@ twitter_clone/
 
 # 🖥️ Como rodar o projeto localmente
 
-### 1️⃣ Clonar o repositório
+### Clonar o repositório
 
 ```bash
 git clone https://github.com/luanlnf/twitter_clone.git
+
 cd twitter_clone
+
 python -m venv venv
+
 .\venv\Scripts\Activate.ps1
+
 pip install -r requirements.txt
+
 python manage.py makemigrations
+
 python manage.py migrate
+
 python manage.py createsuperuser
+
 python manage.py runserver 
 ````
+
 MIT License — livre para estudar, modificar e distribuir.
+
 
