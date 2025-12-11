@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if user.is_authenticated %}
+  <div class="container py-5 text-center">
+    <h2 class="fw-bold">Você já está logado!</h2>
+  </div>
+
+{% else %}
+
+<div class="container py-5">
+  <div class="col-md-6 offset-md-3 login-box shadow-sm p-4 rounded">
+
+    <h2 class="mb-4 fw-bold text-center">Login</h2>
+
+    <form method="POST" action="{% url 'login' %}">
+      {% csrf_token %}
+
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control custom-input"
+          name="username"
+          placeholder="Username"
+          required
+        />
+      </div>
+
+      <div class="mb-4">
+        <input
+          type="password"
+          class="form-control custom-input"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100 py-2 login-btn">
+        Entrar
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock %}

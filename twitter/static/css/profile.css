@@ -1,0 +1,128 @@
+/* ---------------------------
+   PROFILE PAGE (profile.html)
+----------------------------*/
+
+/* Container geral */
+.profile-container {
+  margin-top: 30px;
+}
+
+/* ---------- PROFILE IMAGE ---------- */
+.profile-container img.rounded-5 {
+  border-radius: 20px;
+  border: 3px solid #eee;
+  transition: 0.3s;
+}
+
+.profile-container img.rounded-5:hover {
+  transform: scale(1.05);
+  border-color: #ccc;
+}
+
+/* ---------- SOCIAL LINKS ---------- */
+.social-links a {
+  margin-right: 15px;
+  font-size: 20px;
+  color: gray;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #0d6efd;
+  transform: scale(1.15);
+}
+
+/* ---------- BIO ---------- */
+.profile-bio {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* ---------- TWEETS ---------- */
+.tweet-card {
+  border-radius: 12px;
+  padding: 15px;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  margin-bottom: 18px;
+  transition: 0.25s ease;
+}
+
+.tweet-card:hover {
+  background: #ffffff;
+  border-color: #aaa;
+}
+
+/* Avatar dentro dos tweets */
+.tweet-avatar {
+  border: 2px solid #ddd;
+  transition: 0.25s;
+}
+
+.tweet-avatar:hover {
+  transform: scale(1.08);
+}
+
+/* Conteúdo do tweet */
+.tweet-body {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* ---------- HEART (LIKE) ---------- */
+.like-link i {
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.like-link i:hover {
+  transform: scale(1.2);
+}
+
+.liked {
+  color: red !important;
+}
+
+/* ---------- EDIT / DELETE ICONS ---------- */
+.delete-icon, .edit-icon {
+  color: gray;
+  transition: 0.25s;
+}
+
+.delete-icon:hover {
+  color: rgb(195, 40, 40);
+}
+
+.edit-icon:hover {
+  color: #0d6efd;
+}
+
+/* ---------- LISTAS (Follows / Followers) ---------- */
+.card {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.card-body p, .card-body li {
+  font-size: 15px;
+}
+
+.card-body a {
+  color: #333;
+  transition: 0.2s;
+}
+
+.card-body a:hover {
+  color: #0d6efd;
+}
+
+/* Botões */
+button.btn, .btn {
+  border-radius: 10px !important;
+}

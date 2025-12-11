@@ -1,0 +1,30 @@
+/* ------------ EDIT TWEET PAGE -------------- */
+
+.edit-tweet-container {
+  max-width: 700px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.edit-tweet-card {
+  background: #f8f9fa;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.edit-tweet-card img {
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.edit-tweet-form textarea,
+.edit-tweet-form input {
+  border-radius: 10px !important;
+}
+
+.edit-btn {
+  border-radius: 10px !important;
+  padding: 10px 20px;
+  font-weight: 600;
+}

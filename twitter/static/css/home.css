@@ -1,0 +1,95 @@
+/* ---------------------------
+   HOME PAGE (home.html)
+----------------------------*/
+
+/* Container */
+.home-container {
+  margin-top: 30px;
+}
+
+/* Card de tweet */
+.home-tweet-card {
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 18px;
+  margin-bottom: 20px;
+  transition: 0.25s;
+}
+
+.home-tweet-card:hover {
+  border-color: #aaa;
+  background: #fcfcfc;
+}
+
+/* Cabeçalho */
+.home-tweet-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Avatar */
+.home-avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  transition: 0.2s;
+}
+
+.home-avatar:hover {
+  transform: scale(1.08);
+}
+
+/* Nome */
+.home-username {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* Corpo */
+.home-body {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Data e curtidas */
+.home-footer small {
+  color: #666;
+}
+
+/* Like */
+.home-like-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-left: 10px;
+}
+
+.home-like-icon:hover {
+  transform: scale(1.2);
+}
+
+.home-like-active {
+  color: red !important;
+}
+
+/* Formulário do tweet */
+.home-form-card {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background: #f8f9fa;
+  margin-bottom: 30px;
+}
+
+.home-form-card textarea {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Botão */
+.btn-primary {
+  border-radius: 10px !important;
+}

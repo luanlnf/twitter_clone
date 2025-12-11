@@ -1,0 +1,26 @@
+/* ------------ LOGIN & REGISTER -------------- */
+
+.login-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 30px;
+  border: 1px solid #ddd;
+}
+
+.custom-input {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.login-btn {
+  border-radius: 10px !important;
+  font-weight: 600;
+}
+
+/* Register page */
+.register-box {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  border: 1px solid #ddd;
+}

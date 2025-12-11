@@ -1,0 +1,45 @@
+/* ------------ FOLLOWERS & FOLLOWS LIST -------------- */
+
+.follow-card {
+  max-width: 540px;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.follow-card:hover {
+  border-color: #aaa;
+  background: #fafafa;
+}
+
+.follow-card img {
+  border-radius: 8px;
+}
+
+.follow-username {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.follow-username i {
+  cursor: pointer;
+  margin-left: 5px;
+  transition: .25s;
+}
+
+.follow-username i:hover {
+  transform: scale(1.2);
+  color: #0d6efd;
+}
+
+.follow-link {
+  font-size: 15px;
+  color: #444;
+  text-decoration: none;
+}
+
+.follow-link:hover {
+  color: #0d6efd;
+}
