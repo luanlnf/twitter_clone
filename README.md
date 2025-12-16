@@ -1,73 +1,61 @@
-# 🐦 Twitter Clone (Projeto Django)
+# Twitter Clone 🐦
 
-Clone simples do Twitter desenvolvido com **Django** para fins educacionais.  
-O projeto implementa autenticação, criação de tweets, seguidores, perfis com foto e muito mais.
+Projeto desenvolvido como parte de um desafio técnico, simulando funcionalidades básicas do Twitter.
+---
+## 🚀 Tecnologias Utilizadas
+
+- Python 3
+- Django
+- MySQL
+- HTML5 / CSS3
+- Bootstrap
+- Git / GitHub
+- Deploy no PythonAnywhere
+---
+## 📌 Funcionalidades
+- Cadastro e login de usuários
+- Criação de tweets
+- Curtidas em tweets
+- Perfil de usuário
+- Upload e exibição de imagem de perfil
+- Listagem de usuários
+- Interface responsiva
+---
+## 🗂️ Arquitetura
+- Arquitetura **monolítica**
+- Templates integrados ao Django
+- Separação em apps, models, views, templates e arquivos estáticos
 
 ---
+## ⚙️ Como rodar o projeto localmente
 
-## 🚀 Funcionalidades
-
-- Registro, login e logout  
-- Criar, editar e excluir tweets  
-- Curtir e descurtir tweets  
-- Feed exibindo tweets de quem você segue  
-- Perfis com:
-  - Foto de perfil
-  - Bio
-  - Nome e email
-- Sistema de seguir / deixar de seguir usuários  
-- Upload de imagens (media)  
-
----
-
-## 📦 Tecnologias utilizadas
-
-- Python 3.10+  
-- Django 3+  
-- HTML / CSS  
-- Banco SQLite (local) e MySQL (deploy)  
-- PythonAnywhere para deploy  
-- Git e GitHub  
-
----
-
-## 📁 Estrutura do projeto
-twitter_clone/
-├─ setup/
-├─ twitter/
-│ ├─ templates/
-│ ├─ static/
-│ └─ models.py, views.py, urls.py
-├─ media/
-├─ staticfiles/
-├─ manage.py
-├─ requirements.txt
----
-
-# 🖥️ Como rodar o projeto localmente
-
-### Clonar o repositório
-
-```bash
+### 1️⃣ Clonar o repositório
 git clone https://github.com/luanlnf/twitter_clone.git
+cd twitter_clone 
 
+### 2️⃣ Criar ambiente virtual
+git clone https://github.com/luanlnf/twitter_clone.git
 cd twitter_clone
 
-python -m venv venv
-
-.\venv\Scripts\Activate.ps1
-
+### 3️⃣ Instalar dependências
 pip install -r requirements.txt
 
-python manage.py makemigrations
+### 4️⃣ Configurar banco de dados
+Configure o banco no arquivo settings.py (MySQL ou SQLite)
 
+### 5️⃣ Rodar migrations
 python manage.py migrate
 
+### 6️⃣ Criar superusuário
 python manage.py createsuperuser
 
-python manage.py runserver 
-````
+### 7️⃣ Rodar o servidor
+python manage.py runserver
 
-MIT License — livre para estudar, modificar e distribuir.
-
+--- 
+> 🔗 **Repositório GitHub:**  
+> https://github.com/luanlnf/twitter_clone  
+>  
+> 🌐 **Deploy:**  
+> https://luanf.pythonanywhere.com  
 
