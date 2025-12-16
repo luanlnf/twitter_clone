@@ -14,6 +14,13 @@
   transition: 0.3s;
 }
 
+.profile-avatar {
+  object-fit: cover; 
+  width: 90px;
+  height: 90px;   
+}  
+
+
 .profile-container img.rounded-5:hover {
   transform: scale(1.05);
   border-color: #ccc;
