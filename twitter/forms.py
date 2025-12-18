@@ -1,5 +1,5 @@
 from django import forms
-from .models import Tweet, Profile
+from .models import Tweet, Profile, Comment
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
@@ -22,7 +22,7 @@ class TweetForm(forms.ModelForm):
 	body = forms.CharField(required=True, 
 		widget=forms.widgets.Textarea(
 			attrs={
-			"placeholder": "Write what's in your mind today!",
+			"placeholder": "Escreva o que estiver em sua mente hoje!",
 			"class":"form-control",
 			}
 			),
@@ -33,11 +33,25 @@ class TweetForm(forms.ModelForm):
 		model = Tweet
 		exclude = ("user", "likes",)
 
+class CommentForm(forms.ModelForm):
+    body = forms.CharField(
+        label='',
+        widget=forms.Textarea(attrs={
+            'class': 'form-control',
+            'rows': 2,
+            'placeholder': 'Tweet your reply'
+        })
+    )
+
+    class Meta:
+        model = Comment
+        fields = ('body',)
+
 
 class SignUpForm(UserCreationForm):
 	email = forms.EmailField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Email Address'}))
-	first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'First Name'}))
-	last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Last Name'}))
+	first_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Primeiro Nome'}))
+	last_name = forms.CharField(label="", max_length=100, widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Ultimo Nome'}))
 
 	class Meta:
 		model = User
@@ -49,17 +63,17 @@ class SignUpForm(UserCreationForm):
 		self.fields['username'].widget.attrs['class'] = 'form-control'
 		self.fields['username'].widget.attrs['placeholder'] = 'User Name'
 		self.fields['username'].label = ''
-		self.fields['username'].help_text = '<span class="form-text text-muted"><small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small></span>'
+		self.fields['username'].help_text = '<span class="form-text text-muted"><small>Obrigatório. 150 caracteres ou menos. Somente letras, dígitos e @/./+/-/_.</small></span>'
 
 		self.fields['password1'].widget.attrs['class'] = 'form-control'
 		self.fields['password1'].widget.attrs['placeholder'] = 'Password'
 		self.fields['password1'].label = ''
-		self.fields['password1'].help_text = '<ul class="form-text text-muted small"><li>Your password can\'t be too similar to your other personal information.</li><li>Your password must contain at least 8 characters.</li><li>Your password can\'t be a commonly used password.</li><li>Your password can\'t be entirely numeric.</li></ul>'
+		self.fields['password1'].help_text = '<ul class="form-text text-muted small"><li>Sua senha não pode ser muito semelhante às suas outras informações pessoais.</li><li>Sua senha deve conter pelo menos 8 caracteres.</li><li>Sua senha não pode ser uma senha de uso comum.</li><li>Sua senha não pode ser inteiramente numérica.</li></ul>'
 
 		self.fields['password2'].widget.attrs['class'] = 'form-control'
 		self.fields['password2'].widget.attrs['placeholder'] = 'Confirm Password'
 		self.fields['password2'].label = ''
-		self.fields['password2'].help_text = '<span class="form-text text-muted"><small>Enter the same password as before, for verification.</small></span>'
+		self.fields['password2'].help_text = '<span class="form-text text-muted"><small>Digite a mesma senha de antes para verificação.</small></span>'
 
 class UpdateUserForm(forms.ModelForm):
     email = forms.EmailField(
@@ -67,14 +81,14 @@ class UpdateUserForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email'})
     )
     first_name = forms.CharField(
-        label="First Name",
+        label="Primeiro Nome",
         max_length=50,
-        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'First Name'})
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Primeiro Nome'})
     )
     last_name = forms.CharField(
-        label="Last Name",
+        label="Ultimo Nome",
         max_length=50,
-        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Last Name'})
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ultimo Nome'})
     )
 
     class Meta:

@@ -14,9 +14,28 @@ class Tweet(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
+    
+    def number_of_comments(self):
+        return self.comments.count()
 
     def __str__(self):
         return f"{self.user} ({self.created_at:%d-%m-%Y %H:%M}): {self.body[:20]}..."
+
+class Comment(models.Model):
+    tweet = models.ForeignKey(
+        Tweet,
+        related_name='comments',
+        on_delete=models.CASCADE
+    )
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE
+    )
+    body = models.TextField(max_length=280)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.user.username} - {self.body[:30]}'
 
 
 # Create a User profile Model
@@ -50,4 +69,5 @@ def create_profile(sender, instance, created, **kwargs):
         user_profile.save()
         
 post_save.connect(create_profile, sender=User)
+
 
